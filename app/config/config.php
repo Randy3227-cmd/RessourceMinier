@@ -26,6 +26,25 @@ if (empty($app)) {
 	$app = Flight::app();
 }
 
+// Load environment variables from .env file
+$envFile = __DIR__ . $ds . '..' . $ds . '..' . $ds . '.env';
+if (file_exists($envFile)) {
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '#') === 0) {
+            continue;
+        }
+        list($name, $value) = explode('=', $line, 2);
+        $name = trim($name);
+        $value = trim($value);
+        if (!array_key_exists($name, $_ENV)) {
+            putenv(sprintf('%s=%s', $name, $value));
+            $_ENV[$name] = $value;
+            $_SERVER[$name] = $value;
+        }
+    }
+}
+
 // if you want to load classes that have underscores in them, comment out the following line
 // Loader::setV2ClassLoading(false);
 
@@ -101,12 +120,12 @@ if (Debugger::$showBar && php_sapi_name() !== 'cli') {
 // Database configuration
 return [
     'database' => [
-        'driver'   => 'pgsql',
-        'host'     => 'localhost',
-        'port'     => '5432',
-        'dbname'   => 'ressource_miniere', 
-        'user'     => 'postgres',          
-        'password' => 'wxcvbn3227'         
+        'driver'   => getenv('DB_DRIVER'),
+        'host'     => getenv('DB_HOST') ,
+        'port'     => getenv('DB_PORT') ,
+        'dbname'   => getenv('DB_NAME') ,
+        'user'     => getenv('DB_USER') ,
+        'password' => getenv('DB_PASSWORD'),
     ],
 ];
 

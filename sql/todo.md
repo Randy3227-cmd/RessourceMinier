@@ -46,20 +46,17 @@ L'utilisateur peut filtrer les données selon :
 - **Backend** : PHP (Flight)
 - **Base de données** : PostgreSQL avec extension PostGIS
 
-## CRUD Ressource Minière + Table historique_modification raha misy update natao (1 personne)
+## CRUD Ressource Minière + Table historique_modification raha misy update natao ( Faniry)
 
-## Statistique et tableau de Bord (1 personne)
+## Statistique et tableau de Bord (Miharisoa +  1 personne)
 
     -Nombre total de sites par région / type
     -Graphique de répartition des types de ressources
     -Statistiques de statut (en exploitation, en projet…)
 
-## Mitady donnée Réel (1 personnes)
-     + Document de chaque site
-    rehefa mikitika anle popup an'ny site anakiray de asina lien oe voir plus de lasa makany am lien site anle site d'exploitation minière
-    ex : Ambatovy , https://ambatovy.com/en/
+## Calcul de distance d’une ressource minière par rapport à un endroit (1 personne)
 
-## Manao Boky + Manao slide (2 personne)
+## Manao Boky + Manao slide (Zah +  Harena)
 
 
 

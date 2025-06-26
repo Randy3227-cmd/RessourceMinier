@@ -1,0 +1,36 @@
+# ⚙️ Composer
+/vendor/
+composer.lock
+
+# 🔒 Fichiers sensibles
+.env
+.env.local
+.env.*
+
+# 🧹 Cache / logs
+*.log
+/cache/
+/tmp/
+/storage/
+
+# 💻 IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 🪟 Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 🍏 macOS
+.DS_Store
+
+# 📸 Captures automatiques
+*.bak
+*.old
+
+# 🔍 Autres
+node_modules/
+npm-debug.log

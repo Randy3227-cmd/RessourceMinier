@@ -67,10 +67,60 @@ class RessourceMiniereModel {
         return $this->db->fetchAll($sql, $params);
     }
     
-    
-    
-    
-   
+
+    public function getStatpar_ressource_par_region(){
+        $sql ="SELECT 
+                    r.nom_region,
+                    t.nom_type,
+                    COUNT(*) AS nombre_sites
+                FROM 
+                    ressource_miniere rm
+                JOIN 
+                    region r ON rm.id_region = r.id_region
+                JOIN 
+                    type_ressource t ON rm.id_type_ressource = t.id_type
+                GROUP BY 
+                    r.nom_region, t.nom_type
+                ORDER BY 
+                    r.nom_region, t.nom_type
+                ";
+        $stat = $this->db->fetchAll($sql);
+        return $stat;
+    }
+   public function get_repartition_type_resource(){
+    $sql =" SELECT 
+                t.nom_type AS type_ressource,
+                COUNT(*) AS nombre_sites
+            FROM 
+                ressource_miniere rm
+            JOIN 
+                type_ressource t ON rm.id_type_ressource = t.id_type
+            GROUP BY 
+                t.nom_type
+            ORDER BY 
+                nombre_sites DESC
+            ";
+    $stat = $this->db->fetchAll($sql);
+    return $stat;
+   }
+
+   public function get_repartition_par_statut(){
+    $sql =" SELECT 
+                s.nom_statut AS statut,
+                COUNT(*) AS nombre_sites
+            FROM 
+                ressource_miniere rm
+            JOIN 
+                statut_ressource s ON rm.id_statut_ressource = s.id_statut
+            GROUP BY 
+                s.nom_statut
+            ORDER BY 
+                nombre_sites DESC
+            ";
+    $stat = $this->db->fetchAll($sql);
+    return $stat;
+   }
+
     
     
 }

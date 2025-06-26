@@ -1,0 +1,32 @@
+CREATE DATABASE ressource_miniere;
+\c ressource_miniere;
+CREATE EXTENSION IF NOT EXISTS postgis;
+
+
+CREATE TABLE region (
+    id_region SERIAL PRIMARY KEY,
+    nom_region VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE type_ressource (
+    id_type SERIAL PRIMARY KEY,
+    nom_type VARCHAR(100) NOT NULL -- ex : or, cobalt, ...
+);
+
+
+CREATE TABLE statut_ressource (
+    id_statut SERIAL PRIMARY KEY,
+    nom_statut VARCHAR(100) NOT NULL -- ex: En prospection, En exploitation, Épuisée
+ );
+
+
+CREATE TABLE ressource_miniere (
+    id_ressource SERIAL PRIMARY KEY,
+    nom_site VARCHAR(150) NOT NULL,
+    description TEXT,
+    id_region INT REFERENCES region(id_region),
+    id_type_ressource INT REFERENCES type_ressource(id_type),
+    id_statut_ressource INT REFERENCES statut_ressource(id_statut),
+    image VARCHAR(255), -- URL de l'image
+    geom GEOMETRY(Point, 4326) NOT NULL 
+);

@@ -30,3 +30,10 @@ CREATE TABLE ressource_miniere (
     image VARCHAR(255), -- URL de l'image
     geom GEOMETRY(Point, 4326) NOT NULL 
 );
+
+CREATE TABLE historique_modification(
+    id_historique_modification SERIAL PRIMARY KEY,
+    id_ressource INT REFERENCES ressource_miniere(id_ressource),
+    date_modification TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    description_modification TEXT NOT NULL
+);

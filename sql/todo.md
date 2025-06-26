@@ -7,9 +7,9 @@ Créer une application SIG interactive permettant de visualiser, filtrer, recher
 
 ## ✅ Fonctionnalités principales
 
-### 1. 🔍 Filtres 
+### 1. 🔍 Filtres  (vita)
 L'utilisateur peut filtrer les données selon :
-- **Région** : Affiche uniquement les ressources situées dans une région sélectionnée.
+- **Région** : Affiche uniquement les ressources situées dans une région sélectionnée. 
 - **Type de ressource** : Or, Nickel, Bauxite, etc.
 - **Statut d'exploitation** : En prospection, En exploitation, Épuisée, etc.
 
@@ -41,21 +41,25 @@ L'utilisateur peut filtrer les données selon :
 
 ---
 
-## 💡 Suggestions complémentaires
-- Intégration de **légendes dynamiques** selon les types de ressources.
-- Couleurs différentes pour chaque statut (ex: vert = exploitation, rouge = épuisée).
-- Export des résultats filtrés en **CSV ou Excel**.
-
----
-
 ## 🛠️ Technologies proposées
-- **Frontend** : HTML, JavaScript (Leaflet.js ou OpenLayers), Bootstrap
-- **Backend** : PHP (Flight, Laravel...)
+- **Frontend** : HTML, JavaScript (Leaflet.js), Bootstrap
+- **Backend** : PHP (Flight)
 - **Base de données** : PostgreSQL avec extension PostGIS
 
----
+## CRUD Ressource Minière + Table historique_modification raha misy update natao (1 personne)
 
-## 📌 Remarques
-- Toutes les actions (filtrage, recherche, impression) doivent être réactives et se faire sans rechargement de page (AJAX recommandé).
-- La carte doit être responsive (fonctionnelle sur mobile et desktop).
+## Statistique et tableau de Bord (1 personne)
+
+    -Nombre total de sites par région / type
+    -Graphique de répartition des types de ressources
+    -Statistiques de statut (en exploitation, en projet…)
+
+## Mitady donnée Réel (1 personnes)
+     + Document de chaque site
+    rehefa mikitika anle popup an'ny site anakiray de asina lien oe voir plus de lasa makany am lien site anle site d'exploitation minière
+    ex : Ambatovy , https://ambatovy.com/en/
+
+## Manao Boky + Manao slide (2 personne)
+
+
 

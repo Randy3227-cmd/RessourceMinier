@@ -48,16 +48,11 @@ L'utilisateur peut filtrer les données selon :
 
 ## CRUD Ressource Minière + Table historique_modification raha misy update natao (1 personne)
 
-## Statistique et tableau de Bord (1 personne)
+## Statistique et tableau de Bord (2 personne)
 
     -Nombre total de sites par région / type
     -Graphique de répartition des types de ressources
     -Statistiques de statut (en exploitation, en projet…)
-
-## Mitady donnée Réel (1 personnes)
-     + Document de chaque site
-    rehefa mikitika anle popup an'ny site anakiray de asina lien oe voir plus de lasa makany am lien site anle site d'exploitation minière
-    ex : Ambatovy , https://ambatovy.com/en/
 
 ## Manao Boky + Manao slide (2 personne)
 

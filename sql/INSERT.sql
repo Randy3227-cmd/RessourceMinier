@@ -22,6 +22,13 @@ INSERT INTO region (nom_region) VALUES
 ('Betsiboka'),
 ('Vatovavy');
 
+Nord,
+ Sud,
+  Est,  (Faniry)
+  Ouest, 
+  [NO,NE]
+  , [SO,SE]
+
 INSERT INTO type_ressource (nom_type) VALUES
 ('Or'),
 ('Nickel'),

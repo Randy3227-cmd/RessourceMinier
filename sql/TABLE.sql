@@ -28,7 +28,8 @@ CREATE TABLE ressource_miniere (
     id_type_ressource INT REFERENCES type_ressource(id_type),
     id_statut_ressource INT REFERENCES statut_ressource(id_statut),
     image VARCHAR(255), -- URL de l'image
-    geom GEOMETRY(Point, 4326) NOT NULL 
+    geom GEOMETRY(Point, 4326) NOT NULL ,
+    lien VARCHAR(255)
 );
 
 CREATE TABLE historique_modification(

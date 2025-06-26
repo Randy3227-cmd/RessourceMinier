@@ -9,7 +9,7 @@ class AccueilModel {
     }
 
     public function getRegions() {
-        return $this->db->fetchAll("SELECT id_region, nom_region FROM region ORDER BY nom_region");
+        return $this->db->fetchAll("SELECT id, des_region FROM region ORDER BY des_region");
     }
     
 

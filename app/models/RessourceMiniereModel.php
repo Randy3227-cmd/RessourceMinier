@@ -19,7 +19,7 @@ class RessourceMiniereModel
         $sql = "SELECT 
                     rm.nom_site, 
                     rm.description, 
-                    r.nom_region, 
+                    r.des_region, 
                     tr.nom_type AS nom_type,
                     sr.nom_statut AS nom_statut,
                     ST_Y(rm.geom) AS latitude, 
@@ -48,7 +48,7 @@ class RessourceMiniereModel
         }
 
         if ($region) {
-            $sql .= " AND r.id_region = ?";
+            $sql .= " AND r.id = ?";
             $params[] = $region;
         }
 

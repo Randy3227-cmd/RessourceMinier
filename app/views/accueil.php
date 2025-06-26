@@ -73,7 +73,7 @@
             <select name="region" id="region">
                 <option value="">-- Région --</option>
                 <?php foreach ($regions as $region): ?>
-                    <option value="<?= $region['id_region'] ?>"><?= $region['des_region'] ?></option>
+                    <option value="<?= $region['id'] ?>"><?= $region['des_region'] ?></option>
                 <?php endforeach; ?>
             </select>
 

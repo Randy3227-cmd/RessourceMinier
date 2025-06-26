@@ -5,22 +5,68 @@
     <title>Carte des Ressources Minières - Madagascar</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f1ec;
+            color: #2f2f2f;
+        }
+
+        h2 {
+            background-color: #3e3e3e;
+            color: #f9c74f;
+            padding: 1rem;
+            margin: 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
         #map {
             height: 600px;
             width: 100%;
-            margin-top: 1rem;
         }
+
         .controls {
-            margin: 10px;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
         }
-        .controls select, .controls input {
-            margin-right: 10px;
-            padding: 5px;
+
+        .controls select, .controls input, .controls button {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        .controls select {
+            background-color: #f9f5f0;
+        }
+
+        .controls button {
+            background-color: #7b4f29;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .controls button:hover {
+            background-color: #9b6937;
+        }
+
+        .leaflet-popup-content {
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
-    <h2>Carte des Ressources Minières à Madagascar</h2>
+    <h2>🪨 Carte des Ressources Minières à Madagascar</h2>
 
     <div class="controls">
         <form id="filterForm">
@@ -55,7 +101,7 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        const carte = L.map('map').setView([-18.8792, 47.5079], 6); // centre Madagascar
+        const carte = L.map('map').setView([-18.8792, 47.5079], 6); // Centre Madagascar
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap',
@@ -91,8 +137,7 @@
                 .then(data => afficherRessources(data));
         }
 
-        // Charger les données initialement
-        filtrer();
+        filtrer(); // Chargement initial
     </script>
 </body>
 </html>

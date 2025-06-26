@@ -97,6 +97,7 @@
             <button type="button" onclick="filtrer()">Filtrer</button>
             <button type="button" onclick="window.print()">🖨️ Imprimer</button>
             <button type="button" onclick="geolocaliser()">📍 Ma position</button>
+            <button type="button" onclick="statistiques()">📊 Statistiques</button>
         </form>
     </div>
 
@@ -104,6 +105,10 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
+
+        function statistiques() {
+            window.location.href = 'statistiques';
+        }
         
     function geolocaliser() {
     navigator.geolocation.getCurrentPosition(

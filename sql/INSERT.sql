@@ -87,3 +87,10 @@ INSERT INTO ressource_miniere (
 
 
 
+INSERT INTO ressource_miniere (
+    nom_site, description, id_type_ressource, id_statut_ressource, geom, image, lien
+) VALUES
+('Mine de Mandena', "Mine à ciel ouvert de titane à partir d'un gisement d'ilménite", 4, 3,
+    ST_SetSRID(ST_MakePoint(46.92944, -25.03917), 4326), 'https://omnis.mg/mines/le-projet-ilmenite-de-fort-dauphin/', 'https://fr.wikipedia.org/wiki/Mine_de_Tolagnaro#:~:text=La%20mine%20de%20Tolagnaro%20(ou,(Fort%20Dauphin)%20%C3%A0%20Madagascar.'),
+('QMM - Fort Dauphin', 'Exploitation d`ilménite à Fort Dauphin.', 4, 3,
+    ST_SetSRID(ST_MakePoint(46.9960, -25.0400), 4326), 'https://example.com/qmm.jpg', 'https://example.com/qmm');

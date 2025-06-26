@@ -26,8 +26,7 @@ class StatistiqueController
         $types = $model->getTypes();
         $statuts = $model->getStatuts();
 
-       Flight::render('template.php', [
-            'page'=>'statistiques',
+       Flight::render('statistiques.php', [
             'regions' => $regions,
             'types' => $types,
             'statuts' => $statuts,

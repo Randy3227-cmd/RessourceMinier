@@ -3,10 +3,13 @@ CREATE DATABASE ressource_miniere;
 CREATE EXTENSION IF NOT EXISTS postgis;
 
 
-CREATE TABLE region (
+CREATE TABLE public.region (
     id_region SERIAL PRIMARY KEY,
-    nom_region VARCHAR(100) NOT NULL,
-    geom GEOMETRY(Polygon, 4326) NOT NULL -- Polygone représentant les frontières
+    geom geometry(MULTIPOLYGON, 4326),
+    num_region NUMERIC(10,0),
+    nom_region VARCHAR(30),
+    superficie NUMERIC(15,2),
+    nb_pop NUMERIC(10,0)
 );
 
 CREATE TABLE type_ressource (
@@ -25,7 +28,6 @@ CREATE TABLE ressource_miniere (
     id_ressource SERIAL PRIMARY KEY,
     nom_site VARCHAR(150) NOT NULL,
     description TEXT,
-    -- Plus de colonne id_region ici (on déduit par géométrie)
     id_type_ressource INT REFERENCES type_ressource(id_type),
     id_statut_ressource INT REFERENCES statut_ressource(id_statut),
     image VARCHAR(255), -- URL de l'image

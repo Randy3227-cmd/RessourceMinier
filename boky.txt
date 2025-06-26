@@ -1,0 +1,67 @@
+📘 Structure du livre (10 pages)
+________________________________________
+Page 1 – Introduction Générale
+•	Contexte du projet (Madagascar et ses ressources minières)
+•	Objectifs du projet
+•	Problématique
+•	Intérêt du SIG dans le domaine minier
+________________________________________
+Page 2 – Présentation des Ressources Minières à Madagascar
+•	Types de ressources minières présentes (or, nickel, cobalt, graphite…)
+•	Localisation géographique générale
+•	Acteurs principaux (entreprises minières, État, communautés locales)
+•	Statut juridique des ressources
+________________________________________
+Page 3 – Cahier des Charges et Besoins
+•	Liste des fonctionnalités attendues
+•	Besoins des utilisateurs (chercheurs, exploitants, État, etc.)
+•	Contraintes techniques
+•	Technologies choisies (PostgreSQL, PostGIS, PHP, etc.)
+________________________________________
+Page 4 – Architecture du Système
+•	Schéma global de l’architecture (Frontend / Backend / Base de données)
+•	Description des modules (Module carte, filtrage, insertion de données…)
+•	Structure MVC (Model-View-Controller)
+•	Interaction entre les composants
+________________________________________
+Page 5 – Base de Données et Conception SIG
+•	Modèle conceptuel (MCD simplifié)
+•	Modèle logique (PostgreSQL + PostGIS)
+•	Tables principales (ressource, localisation, statut, utilisateur…)
+•	Types géographiques utilisés (POINT, POLYGON…)
+________________________________________
+Page 6 – Fonctionnalités Clés du Système
+•	Visualisation des ressources sur carte
+•	Recherche multicritères (par région, type, statut…)
+•	Ajout / modification / suppression de ressources
+•	Filtrage par couche géographique
+•	Gestion des utilisateurs et rôles
+________________________________________
+Page 7 – Exemple de Données
+•	Extrait de données réelles ou fictives utilisées
+•	Données géographiques (coordonnées, shapefiles…)
+•	Données attributaires (nom, statut, type, année, etc.)
+•	Screenshots de la carte et de l’interface
+________________________________________
+Page 8 – Implémentation Technique
+•	Description du backend (PHP avec FlightPHP)
+•	Requêtes SQL/PostGIS utilisées
+•	Vue principale du système
+•	Contrôleurs, Modèles, Vues
+•	Librairies utilisées (Leaflet, Bootstrap, etc.)
+________________________________________
+Page 9 – Difficultés Rencontrées et Solutions
+•	Gestion des données géospatiales
+•	Interprétation des coordonnées et projection
+•	Mise en relation des couches de données
+•	Sécurité (accès, validation des entrées)
+________________________________________
+Page 10 – Conclusion et Perspectives
+•	Résultat final
+•	Bilan par rapport aux objectifs
+•	Perspectives d’évolution :
+o	Ajout de statistiques
+o	Intégration de données environnementales
+o	Application mobile
+o	API publique pour les chercheurs
+

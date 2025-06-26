@@ -5,7 +5,8 @@ CREATE EXTENSION IF NOT EXISTS postgis;
 
 CREATE TABLE region (
     id_region SERIAL PRIMARY KEY,
-    nom_region VARCHAR(100) NOT NULL
+    nom_region VARCHAR(100) NOT NULL,
+    geom GEOMETRY(Polygon, 4326) NOT NULL -- Polygone représentant les frontières
 );
 
 CREATE TABLE type_ressource (
@@ -24,11 +25,11 @@ CREATE TABLE ressource_miniere (
     id_ressource SERIAL PRIMARY KEY,
     nom_site VARCHAR(150) NOT NULL,
     description TEXT,
-    id_region INT REFERENCES region(id_region),
+    -- Plus de colonne id_region ici (on déduit par géométrie)
     id_type_ressource INT REFERENCES type_ressource(id_type),
     id_statut_ressource INT REFERENCES statut_ressource(id_statut),
     image VARCHAR(255), -- URL de l'image
-    geom GEOMETRY(Point, 4326) NOT NULL ,
+    geom GEOMETRY(Point, 4326) NOT NULL,
     lien VARCHAR(255)
 );
 

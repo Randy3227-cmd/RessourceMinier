@@ -92,7 +92,7 @@
             </select>
             <input type="text" name="latitude" id="latitude" placeholder="Latitude" readonly>
             <input type="text" name="longitude" id="longitude" placeholder="Longitude" readonly>
-
+            <input type="number" name="rayon" id="rayon" placeholder="Rayon en metre (default : 10000m)">
             <input type="text" id="recherche" placeholder="🔍 Nom du site">
             <button type="button" onclick="filtrer()">Filtrer</button>
             <button type="button" onclick="window.print()">🖨️ Imprimer</button>
@@ -104,12 +104,12 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
+        
     function geolocaliser() {
     navigator.geolocation.getCurrentPosition(
         position => {
             document.getElementById('latitude').value = position.coords.latitude;
             document.getElementById('longitude').value = position.coords.longitude;
-            filtrer();
             ajouterMarqueurUtilisateur(document.getElementById('latitude').value, document.getElementById('longitude').value);
         }
     );
@@ -165,8 +165,10 @@
             const type = document.getElementById('type').value;
             const statut = document.getElementById('statut').value;
             const recherche = document.getElementById('recherche').value;
-
-            fetch(`api/ressources?region=${region}&type=${type}&statut=${statut}&search=${recherche}`)
+            const latitude = document.getElementById('latitude').value;
+            const longitude = document.getElementById('longitude').value;
+            const rayon = document.getElementById('rayon').value;
+            fetch(`api/ressources?region=${region}&type=${type}&statut=${statut}&search=${recherche}&latitude=${latitude}&longitude=${longitude}&rayon=${rayon}`)
                 .then(res => res.json())
                 .then(data => afficherRessources(data));
         }

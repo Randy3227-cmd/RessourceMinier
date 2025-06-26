@@ -90,10 +90,13 @@
                     <option value="<?= $statut['id_statut'] ?>"><?= $statut['nom_statut'] ?></option>
                 <?php endforeach; ?>
             </select>
+            <input type="text" name="latitude" id="latitude" placeholder="Latitude" readonly>
+            <input type="text" name="longitude" id="longitude" placeholder="Longitude" readonly>
 
             <input type="text" id="recherche" placeholder="🔍 Nom du site">
             <button type="button" onclick="filtrer()">Filtrer</button>
             <button type="button" onclick="window.print()">🖨️ Imprimer</button>
+            <button type="button" onclick="geolocaliser()">📍 Ma position</button>
         </form>
     </div>
 
@@ -101,6 +104,37 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
+    function geolocaliser() {
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            document.getElementById('latitude').value = position.coords.latitude;
+            document.getElementById('longitude').value = position.coords.longitude;
+            filtrer();
+            ajouterMarqueurUtilisateur(document.getElementById('latitude').value, document.getElementById('longitude').value);
+        }
+    );
+    let markerUtilisateur = null;
+
+    function ajouterMarqueurUtilisateur(lat, lon) {
+        if (markerUtilisateur) {
+            carte.removeLayer(markerUtilisateur);
+        }
+
+        markerUtilisateur = L.marker([lat, lon], {
+            title: "Votre position",
+            icon: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+                iconSize: [30, 30],
+                iconAnchor: [15, 30],
+                popupAnchor: [0, -30]
+            })
+        }).addTo(carte).bindPopup("📍 Vous êtes ici").openPopup();
+    }
+}
+    </script>
+    <script>
+
+
         const carte = L.map('map').setView([-18.8792, 47.5079], 6); // Centre Madagascar
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -138,6 +172,24 @@
         }
 
         filtrer(); // Chargement initial
+
+        let markerClic = null;
+
+        carte.on('click', function(e) {
+            const lat = e.latlng.lat.toFixed(6);
+            const lon = e.latlng.lng.toFixed(6);
+
+            document.getElementById('latitude').value = lat;
+            document.getElementById('longitude').value = lon;
+
+            if (markerClic) {
+                carte.removeLayer(markerClic);
+            }
+
+            markerClic = L.marker([lat, lon], {
+                title: "Position sélectionnée"
+            }).addTo(carte).bindPopup("📍 Position choisie").openPopup();
+        });
     </script>
 </body>
 </html>

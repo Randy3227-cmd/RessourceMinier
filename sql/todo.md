@@ -56,7 +56,7 @@ L'utilisateur peut filtrer les données selon :
 
 ## Calcul de distance d’une ressource minière par rapport à un endroit (1 personne)
 
-## Manao Boky + Manao slide (Zah +  personne)
+## Manao Boky + Manao slide (Zah +  Harena)
 
 
 

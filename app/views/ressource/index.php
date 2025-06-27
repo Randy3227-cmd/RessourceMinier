@@ -156,7 +156,7 @@
 <h1>Liste des ressources minières</h1>
 <div class="actions-bar">
     <a href="/">← Retour à l'accueil</a>
-    <a href="/ressources/create">Ajouter une ressource</a>
+    <a href="ressources/create">Ajouter une ressource</a>
 </div>
 <div class="cards-container">
     <?php foreach ($ressources as $r): ?>
@@ -177,7 +177,7 @@
                 </div>
             <?php endif; ?>
             <div class="card-actions">
-                <a href="/ressources/edit/<?= $r['id_ressource'] ?>" title="Modifier">
+                <a href="ressources/edit/<?= $r['id_ressource'] ?>" title="Modifier">
                     <!-- Icône crayon -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" style="vertical-align:middle;margin-right:4px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536M9 13l6.586-6.586a2 2 0 112.828 2.828L11.828 15.828a2 2 0 01-1.414.586H7v-3a2 2 0 01.586-1.414z"/>
@@ -191,7 +191,7 @@
                     </svg>
                     Supprimer
                 </a>
-                <a href="/ressources/historique/<?= $r['id_ressource'] ?>">Voir historique</a>
+                <a href="ressources/historique/<?= $r['id_ressource'] ?>">Voir historique</a>
             </div>
         </div>
     <?php endforeach; ?>

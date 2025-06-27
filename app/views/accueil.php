@@ -68,7 +68,7 @@
 <body>
     <h2>🪨 Carte des Ressources Minières à Madagascar</h2>
     <div style="text-align:center; margin: 1.2rem 0;">
-        <a href="/ressources" style="
+        <a href="ressources" style="
             background: #7b4f29;
             color: #fff;
             padding: 10px 22px;
@@ -89,7 +89,7 @@
             <select name="region" id="region">
                 <option value="">-- Région --</option>
                 <?php foreach ($regions as $region): ?>
-                    <option value="<?= $region['id'] ?>"><?= $region['des_region'] ?></option>
+                    <option value="<?= $region['id_region'] ?>"><?= $region['nom_region'] ?></option>
                 <?php endforeach; ?>
             </select>
 
@@ -174,7 +174,7 @@
                     .bindPopup(`
                         <strong>${ressource.nom_site}</strong><br>
                         ${ressource.description}<br>
-                        <em>${ressource.des_region} | ${ressource.nom_type} | ${ressource.nom_statut}</em>
+                        <em>${ressource.nom_region} | ${ressource.nom_type} | ${ressource.nom_statut}</em>
                     `);
 
                 marqueurs.push(marker);

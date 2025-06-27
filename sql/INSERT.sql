@@ -112,3 +112,6 @@ INSERT INTO ressource_miniere (
     ST_SetSRID(ST_MakePoint(45.1304, -24.0019), 4326), NULL, 'https://en.wikipedia.org/wiki/Molo_mine'),
 ('Green Giant mine', 'Une des plus grande mine de Vanadium de Madagascar', 21, 3,
     ST_SetSRID(ST_MakePoint(45.05, -24.01), 4326), NULL, 'https://en.wikipedia.org/wiki/Green_Giant_mine'),
+
+ALTER TABLE region RENAME COLUMN des_region TO nom_region;
+ALTER TABLE region RENAME COLUMN id TO id_region;

@@ -125,4 +125,4 @@
     <textarea name="raison_modification" required placeholder="Décrivez la raison de cette modification"></textarea>
     <button type="submit">Mettre à jour</button>
 </form>
-<a href="/ressources">Retour à la liste</a>
+<a href="ressources">Retour à la liste</a>

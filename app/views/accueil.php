@@ -67,6 +67,22 @@
 </head>
 <body>
     <h2>🪨 Carte des Ressources Minières à Madagascar</h2>
+    <div style="text-align:center; margin: 1.2rem 0;">
+        <a href="/ressources" style="
+            background: #7b4f29;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: background 0.2s;
+            display: inline-block;
+        " onmouseover="this.style.background='#9b6937'" onmouseout="this.style.background='#7b4f29'">
+            ➕ Gérer les ressources minières
+        </a>
+    </div>
 
     <div class="controls">
         <form id="filterForm">

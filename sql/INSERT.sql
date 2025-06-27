@@ -87,6 +87,7 @@ INSERT INTO ressource_miniere (
     ST_SetSRID(ST_MakePoint(47.3667, -19.7000), 4326));
 
 
+
 -- Sites minières du Sud de Madagascar
 INSERT INTO ressource_miniere (
     nom_site, description, id_type_ressource, id_statut_ressource, geom, image, lien

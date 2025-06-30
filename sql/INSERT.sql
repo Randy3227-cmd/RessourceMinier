@@ -115,3 +115,5 @@ INSERT INTO ressource_miniere (
 
 ALTER TABLE region RENAME COLUMN des_region TO nom_region;
 ALTER TABLE region RENAME COLUMN id TO id_region;
+
+

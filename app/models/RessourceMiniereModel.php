@@ -19,7 +19,8 @@ class RessourceMiniereModel
     {
         $sql = "SELECT 
                     rm.nom_site, 
-                    rm.description, 
+                    rm.description,
+                    rm.lien, 
                     r.nom_region, 
                     tr.nom_type AS nom_type,
                     sr.nom_statut AS nom_statut,

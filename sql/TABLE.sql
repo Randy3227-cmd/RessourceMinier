@@ -2,16 +2,6 @@ CREATE DATABASE ressource_miniere;
 \c ressource_miniere;
 CREATE EXTENSION IF NOT EXISTS postgis;
 
-
-CREATE TABLE public.region (
-    id_region SERIAL PRIMARY KEY,
-    geom geometry(MULTIPOLYGON, 4326),
-    num_region NUMERIC(10,0),
-    nom_region VARCHAR(30),
-    superficie NUMERIC(15,2),
-    nb_pop NUMERIC(10,0)
-);
-
 CREATE TABLE type_ressource (
     id_type SERIAL PRIMARY KEY,
     nom_type VARCHAR(100) NOT NULL -- ex : or, cobalt, ...

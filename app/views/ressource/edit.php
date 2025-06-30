@@ -118,11 +118,11 @@
     <input type="text" name="lien" value="<?= htmlspecialchars($ressource['lien'] ?? '') ?>">
     <label>Image</label>
     <?php if (!empty($ressource['image'])): ?>
-        <img src="/<?= htmlspecialchars($ressource['image'] ?? '') ?>" alt="Image actuelle">
+        <img src="<?= BASE_URL?>/<?= htmlspecialchars($ressource['image'] ?? '') ?>" alt="Image actuelle">
     <?php endif; ?>
     <input type="file" name="image" accept="image/*">
     <label>Raison de la modification</label>
     <textarea name="raison_modification" required placeholder="Décrivez la raison de cette modification"></textarea>
     <button type="submit">Mettre à jour</button>
 </form>
-<a href="ressources">Retour à la liste</a>
+<a href="<?= BASE_URL?>/ressources">Retour à la liste</a>

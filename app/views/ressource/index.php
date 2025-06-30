@@ -155,15 +155,15 @@
 
 <h1>Liste des ressources minières</h1>
 <div class="actions-bar">
-    <a href="/">← Retour à l'accueil</a>
-    <a href="ressources/create">Ajouter une ressource</a>
+    <a href="<?= BASE_URL?>/">← Retour à l'accueil</a>
+    <a href="<?= BASE_URL?>/ressources/create">Ajouter une ressource</a>
 </div>
 <div class="cards-container">
     <?php foreach ($ressources as $r): ?>
         <div class="card">
             <div class="card-title"><?= htmlspecialchars($r['nom_site']) ?></div>
             <?php if (!empty($r['image'])): ?>
-                <img class="card-img" src="/<?= htmlspecialchars($r['image']) ?>" alt="Image">
+                <img class="card-img" src="<?= BASE_URL?>/<?= htmlspecialchars($r['image']) ?>" alt="Image">
             <?php endif; ?>
             <div class="card-desc"><?= htmlspecialchars($r['description']) ?></div>
             <div class="card-meta">

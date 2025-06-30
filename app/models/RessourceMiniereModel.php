@@ -14,7 +14,7 @@ class RessourceMiniereModel
         $this->db = $db;
     }
 
-    
+
     public function getFilteredRessources($region, $type, $statut, $search, $refLatitude, $refLongitude, $distance = 10000)
     {
         $sql = "SELECT 
@@ -82,7 +82,7 @@ class RessourceMiniereModel
 
     public function getById($id)
     {
-        $sql = "SELECT * FROM ressource_miniere WHERE id_ressource = ?";
+        $sql = "SELECT rm.*, ST_Y(rm.geom) AS latitude, ST_X(rm.geom) AS longitude FROM ressource_miniere rm WHERE id_ressource = ?";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$id]);
         return $stmt->fetch(\PDO::FETCH_ASSOC);

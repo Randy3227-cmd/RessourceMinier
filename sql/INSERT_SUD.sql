@@ -2,11 +2,11 @@
 INSERT INTO ressource_miniere (
     nom_site, description, id_type_ressource, id_statut_ressource, geom, image, lien
 ) VALUES
-('Mine de Mandena', "Mine à ciel ouvert de titane à partir d'un gisement d'ilménite", 4, 3,
+('Mine de Mandena', 'Mine à ciel ouvert de titane à partir d''un gisement d''ilménite', 4, 3,
     ST_SetSRID(ST_MakePoint(46.92944, -25.03917), 4326), 'https://omnis.mg/mines/le-projet-ilmenite-de-fort-dauphin/', 'https://fr.wikipedia.org/wiki/Mine_de_Tolagnaro#:~:text=La%20mine%20de%20Tolagnaro%20(ou,(Fort%20Dauphin)%20%C3%A0%20Madagascar.'),
 ('Mine de Sakoa', 'Exploitation de charbon dans la région de Toliara', 16, 3,
     ST_SetSRID(ST_MakePoint(46.92944, -25.03917), 4326),'','https://omnis.mg/mines/le-projet-charbon-de-la-sakoa/'),
-("Mine de Saphir d'Ilakalaka", 'La plus grande mine de Saphir à ciel ouvert du monde', 6, 3,
+('Mine de Saphir d''Ilakalaka', 'La plus grande mine de Saphir à ciel ouvert du monde', 6, 3,
     ST_SetSRID(ST_MakePoint(44.495306650970214,-22.696848290953497),4326),NULL,'https://www.gia.edu/gia-news-research-Sapphire-Mining-Ilakaka-Madagascar'),
 ('Mine de Graphite de Maniry', 'Exploitation de graphite dans la région d''Atsimo-Andrefana', 6, 3,
     ST_SetSRID(ST_MakePoint(44.5500, -22.9667), 4326), NULL, 'https://www.mining-technology.com/projects/maniry-graphite-project/'),
@@ -21,4 +21,4 @@ INSERT INTO ressource_miniere (
 ('Molo mine', 'Une des plus grandes mine de graphite à Madagascar', 5, 3,
     ST_SetSRID(ST_MakePoint(45.1304, -24.0019), 4326), NULL, 'https://en.wikipedia.org/wiki/Molo_mine'),
 ('Green Giant mine', 'Une des plus grande mine de Vanadium de Madagascar', 21, 3,
-    ST_SetSRID(ST_MakePoint(45.05, -24.01), 4326), NULL, 'https://en.wikipedia.org/wiki/Green_Giant_mine'),
+    ST_SetSRID(ST_MakePoint(45.05, -24.01), 4326), NULL, 'https://en.wikipedia.org/wiki/Green_Giant_mine');

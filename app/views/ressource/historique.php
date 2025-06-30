@@ -53,7 +53,7 @@
 <h1>Historique des modifications<br>
     <small><?= htmlspecialchars($ressource['nom_site']) ?></small>
 </h1>
-<a href="ressources">← Retour à la liste</a>
+<a href="<?= BASE_URL?>/ressources">← Retour à la liste</a>
 <table>
     <thead>
         <tr>

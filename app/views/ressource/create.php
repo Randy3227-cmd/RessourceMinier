@@ -108,4 +108,4 @@
     <input type="file" name="image" accept="image/*">
     <button type="submit">Enregistrer</button>
 </form>
-<a href="ressources">Retour à la liste</a>
+<a href="<?= BASE_URL?>/ressources">Retour à la liste</a>
